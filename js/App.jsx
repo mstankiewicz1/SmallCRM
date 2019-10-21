@@ -13,10 +13,9 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>SmallCRM</h1>
                 <Header/>
-                <Inventory/>
                 <Order/>
+                <Inventory/>
                 <AdminPanel/>
             </div>
         )
