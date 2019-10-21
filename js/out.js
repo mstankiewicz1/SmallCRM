@@ -22622,15 +22622,15 @@ var Header = function (_React$Component) {
     }
 
     _createClass(Header, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "header" },
                 _react2.default.createElement(
-                    'h1',
+                    "h1",
                     null,
-                    'Header'
+                    "Header"
                 )
             );
         }
@@ -22676,15 +22676,15 @@ var Inventory = function (_React$Component) {
     }
 
     _createClass(Inventory, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "inventory" },
                 _react2.default.createElement(
-                    'h1',
+                    "h1",
                     null,
-                    'Inventory'
+                    "Inwentarz"
                 )
             );
         }
@@ -22730,15 +22730,15 @@ var Order = function (_React$Component) {
     }
 
     _createClass(Order, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "order" },
                 _react2.default.createElement(
-                    'h1',
+                    "h1",
                     null,
-                    'Order'
+                    "Zam\xF3wienie"
                 )
             );
         }
@@ -22784,15 +22784,15 @@ var AdminPanel = function (_React$Component) {
     }
 
     _createClass(AdminPanel, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "adminPanel" },
                 _react2.default.createElement(
-                    'h1',
+                    "h1",
                     null,
-                    'AdminPanel'
+                    "AdminPanel"
                 )
             );
         }

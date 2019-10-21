@@ -8,7 +8,7 @@ class AdminPanel extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="adminPanel">
                 <h1>AdminPanel</h1>
             </div>
         )

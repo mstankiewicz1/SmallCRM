@@ -8,8 +8,8 @@ class Order extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Order</h1>
+            <div className="order">
+                <h1>Zamówienie</h1>
             </div>
         )
     }

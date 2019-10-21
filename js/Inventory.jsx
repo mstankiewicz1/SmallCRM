@@ -8,8 +8,8 @@ class Inventory extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Inventory</h1>
+            <div className="inventory">
+                <h1>Inwentarz</h1>
             </div>
         )
     }
