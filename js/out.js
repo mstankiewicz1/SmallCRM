@@ -22616,21 +22616,57 @@ var Header = function (_React$Component) {
     _inherits(Header, _React$Component);
 
     function Header() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Header);
 
-        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            SmallCRMName: 'Black Books',
+            clicked: true,
+            textColor: 'white',
+            backgroundColor: 'black'
+        }, _this.handleClick = function () {
+
+            if (_this.state.clicked) {
+                _this.setState({
+                    SmallCRMName: 'White Books',
+                    clicked: !_this.state.clicked,
+                    textColor: 'white',
+                    backgroundColor: 'black'
+                });
+            } else {
+                _this.setState({
+                    SmallCRMName: 'Black Books',
+                    clicked: !_this.state.clicked,
+                    textColor: 'black',
+                    backgroundColor: 'white'
+                });
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Header, [{
-        key: "render",
+        key: 'render',
         value: function render() {
+
+            var styleCss = {
+                color: this.state.textColor,
+                backgroundColor: this.state.backgroundColor
+            };
+
             return _react2.default.createElement(
-                "div",
-                { className: "header" },
+                'div',
+                { className: 'header', style: styleCss, onClick: this.handleClick },
                 _react2.default.createElement(
-                    "h1",
+                    'h1',
                     null,
-                    "Header"
+                    this.state.SmallCRMName
                 )
             );
         }
