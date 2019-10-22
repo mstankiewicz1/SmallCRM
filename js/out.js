@@ -22806,6 +22806,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22834,7 +22836,8 @@ var AdminPanel = function (_React$Component) {
                 author: "",
                 description: "",
                 check: true
-            }
+            },
+            books: []
         }, _this.handleChange = function (e) {
 
             var newBook = void 0;
@@ -22847,6 +22850,25 @@ var AdminPanel = function (_React$Component) {
             _this.setState({
                 book: newBook
             });
+        }, _this.addNewBook = function (e) {
+
+            e.preventDefault();
+
+            var newBooks = [].concat(_toConsumableArray(_this.state.books));
+
+            var newBook = _extends({}, _this.state.book);
+
+            newBooks.push(newBook);
+
+            _this.setState({
+                books: newBooks,
+                book: {
+                    name: "",
+                    author: "",
+                    description: "",
+                    check: true
+                }
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -22858,7 +22880,7 @@ var AdminPanel = function (_React$Component) {
                 { className: "adminPanel" },
                 _react2.default.createElement(
                     "form",
-                    null,
+                    { onSubmit: this.addNewBook },
                     _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Wpisz nazw\u0119 ksi\u0105\u017Cki", value: this.state.book.name,
                         onChange: this.handleChange }),
                     _react2.default.createElement("input", { type: "text", name: "author", placeholder: "Wpisz autora", value: this.state.book.author,
