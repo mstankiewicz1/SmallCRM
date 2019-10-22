@@ -22796,6 +22796,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(16);
@@ -22829,12 +22831,19 @@ var AdminPanel = function (_React$Component) {
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AdminPanel.__proto__ || Object.getPrototypeOf(AdminPanel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             book: {
                 name: "",
-                author: ""
+                author: "",
+                description: "",
+                check: true
             }
         }, _this.handleChange = function (e) {
 
-            var newBook = _defineProperty({}, event.target.name, e.target.value);
+            var newBook = void 0;
 
+            if (e.target.name === "check") {
+                newBook = _extends({}, _this.state.book, _defineProperty({}, e.target.name, e.target.checked));
+            } else {
+                newBook = _extends({}, _this.state.book, _defineProperty({}, e.target.name, e.target.value));
+            }
             _this.setState({
                 book: newBook
             });
@@ -22852,11 +22861,11 @@ var AdminPanel = function (_React$Component) {
                     null,
                     _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Wpisz nazw\u0119 ksi\u0105\u017Cki", value: this.state.book.name,
                         onChange: this.handleChange }),
-                    _react2.default.createElement("input", { type: "text", name: "author", placeholder: "Wpisz autora",
+                    _react2.default.createElement("input", { type: "text", name: "author", placeholder: "Wpisz autora", value: this.state.book.author,
                         onChange: this.handleChange }),
-                    _react2.default.createElement("textarea", { placeholder: "Wpisz opis ksi\u0105\u017Cki",
+                    _react2.default.createElement("textarea", { name: "description", placeholder: "Wpisz opis ksi\u0105\u017Cki", value: this.state.book.description,
                         onChange: this.handleChange }),
-                    _react2.default.createElement("input", { type: "checkbox", id: "available",
+                    _react2.default.createElement("input", { type: "checkbox", name: "check", id: "available", value: this.state.book.check,
                         onChange: this.handleChange }),
                     _react2.default.createElement(
                         "label",
