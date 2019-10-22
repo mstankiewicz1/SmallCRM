@@ -22804,6 +22804,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22814,9 +22816,29 @@ var AdminPanel = function (_React$Component) {
     _inherits(AdminPanel, _React$Component);
 
     function AdminPanel() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, AdminPanel);
 
-        return _possibleConstructorReturn(this, (AdminPanel.__proto__ || Object.getPrototypeOf(AdminPanel)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AdminPanel.__proto__ || Object.getPrototypeOf(AdminPanel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            book: {
+                name: "",
+                author: ""
+            }
+        }, _this.handleChange = function (e) {
+
+            var newBook = _defineProperty({}, event.target.name, e.target.value);
+
+            _this.setState({
+                book: newBook
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(AdminPanel, [{
@@ -22828,13 +22850,17 @@ var AdminPanel = function (_React$Component) {
                 _react2.default.createElement(
                     "form",
                     null,
-                    _react2.default.createElement("input", { type: "text", placeholder: "Wpisz nazw\u0119 ksi\u0105\u017Cki" }),
-                    _react2.default.createElement("input", { type: "text", placeholder: "Wpisz autora" }),
-                    _react2.default.createElement("textarea", { placeholder: "Wpisz opis ksi\u0105\u017Cki" }),
-                    _react2.default.createElement("input", { type: "checkbox", id: "available" }),
+                    _react2.default.createElement("input", { type: "text", name: "name", placeholder: "Wpisz nazw\u0119 ksi\u0105\u017Cki", value: this.state.book.name,
+                        onChange: this.handleChange }),
+                    _react2.default.createElement("input", { type: "text", name: "author", placeholder: "Wpisz autora",
+                        onChange: this.handleChange }),
+                    _react2.default.createElement("textarea", { placeholder: "Wpisz opis ksi\u0105\u017Cki",
+                        onChange: this.handleChange }),
+                    _react2.default.createElement("input", { type: "checkbox", id: "available",
+                        onChange: this.handleChange }),
                     _react2.default.createElement(
                         "label",
-                        { form: "available" },
+                        { htmlFor: "available" },
                         "Dost\u0119pna"
                     ),
                     _react2.default.createElement(
