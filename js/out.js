@@ -22826,9 +22826,22 @@ var AdminPanel = function (_React$Component) {
                 "div",
                 { className: "adminPanel" },
                 _react2.default.createElement(
-                    "h1",
+                    "form",
                     null,
-                    "AdminPanel"
+                    _react2.default.createElement("input", { type: "text", placeholder: "Wpisz nazw\u0119 ksi\u0105\u017Cki" }),
+                    _react2.default.createElement("input", { type: "text", placeholder: "Wpisz autora" }),
+                    _react2.default.createElement("textarea", { placeholder: "Wpisz opis ksi\u0105\u017Cki" }),
+                    _react2.default.createElement("input", { type: "checkbox", id: "available" }),
+                    _react2.default.createElement(
+                        "label",
+                        { form: "available" },
+                        "Dost\u0119pna"
+                    ),
+                    _react2.default.createElement(
+                        "button",
+                        { type: "submit" },
+                        "Dodaj"
+                    )
                 )
             );
         }
