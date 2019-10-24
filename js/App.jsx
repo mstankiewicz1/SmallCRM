@@ -33,7 +33,7 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <Order/>
-                <Inventory/>
+                <Inventory books={this.state.books}/>
                 <AdminPanel books={this.state.books} addBook={this.addNewBook}/>
             </div>
         )

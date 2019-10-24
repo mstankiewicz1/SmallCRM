@@ -1,4 +1,5 @@
 import React from 'react';
+import BookView from './BookView.jsx';
 
 
 
@@ -7,9 +8,15 @@ class Inventory extends React.Component {
 
 
     render() {
+
+        const bookListing = this.props.books.map(book => {
+            return (
+                <BookView book={book}/>
+            )});
+
         return (
             <div className="inventory">
-                <h1>Inwentarz</h1>
+                {bookListing}
             </div>
         )
     }
