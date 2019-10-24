@@ -22553,6 +22553,8 @@ var _AdminPanel2 = _interopRequireDefault(_AdminPanel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22563,9 +22565,29 @@ var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
     function App() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            books: []
+
+        }, _this.addNewBook = function (newBook) {
+
+            var newBooks = [].concat(_toConsumableArray(_this.state.books));
+
+            newBooks.push(newBook);
+
+            _this.setState({
+                books: newBooks
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(App, [{
@@ -22577,7 +22599,7 @@ var App = function (_React$Component) {
                 _react2.default.createElement(_Header2.default, null),
                 _react2.default.createElement(_Order2.default, null),
                 _react2.default.createElement(_Inventory2.default, null),
-                _react2.default.createElement(_AdminPanel2.default, null)
+                _react2.default.createElement(_AdminPanel2.default, { books: this.state.books, addBook: this.addNewBook })
             );
         }
     }]);
@@ -22806,8 +22828,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22836,8 +22856,7 @@ var AdminPanel = function (_React$Component) {
                 author: "",
                 description: "",
                 check: true
-            },
-            books: []
+            }
         }, _this.handleChange = function (e) {
 
             var newBook = void 0;
@@ -22854,14 +22873,11 @@ var AdminPanel = function (_React$Component) {
 
             e.preventDefault();
 
-            var newBooks = [].concat(_toConsumableArray(_this.state.books));
-
             var newBook = _extends({}, _this.state.book);
 
-            newBooks.push(newBook);
+            _this.props.addBook(newBook);
 
             _this.setState({
-                books: newBooks,
                 book: {
                     name: "",
                     author: "",

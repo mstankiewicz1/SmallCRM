@@ -9,6 +9,24 @@ import AdminPanel from './AdminPanel.jsx';
 class App extends React.Component {
 
 
+    state = {
+        books: [],
+
+    };
+
+
+    addNewBook = (newBook) => {
+
+        let newBooks = [...this.state.books];
+
+        newBooks.push(newBook);
+
+        this.setState({
+          books: newBooks
+        })
+    };
+
+
 
     render() {
         return (
@@ -16,7 +34,7 @@ class App extends React.Component {
                 <Header/>
                 <Order/>
                 <Inventory/>
-                <AdminPanel/>
+                <AdminPanel books={this.state.books} addBook={this.addNewBook}/>
             </div>
         )
     }
