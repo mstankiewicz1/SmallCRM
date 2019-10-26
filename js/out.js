@@ -22891,7 +22891,7 @@ var Order = function (_React$Component) {
             var _this2 = this;
 
             var orderedBooks = this.props.order.map(function (order) {
-                return _react2.default.createElement(_OrderView2.default, { key: order.name, book: order, removeFromOrder: _this2.props.removeFromOrder });
+                return _react2.default.createElement(_OrderView2.default, { book: order, removeFromOrder: _this2.props.removeFromOrder });
             });
 
             return _react2.default.createElement(
