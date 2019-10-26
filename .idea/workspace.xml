@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf801abe-5d7c-491e-832f-a6a6255b9dca" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/OrderView.jsx" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/js/App.jsx" afterPath="$PROJECT_DIR$/js/App.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/BookView.jsx" afterPath="$PROJECT_DIR$/js/BookView.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/Inventory.jsx" afterPath="$PROJECT_DIR$/js/Inventory.jsx" />
-      <change beforePath="$PROJECT_DIR$/js/Order.jsx" afterPath="$PROJECT_DIR$/js/Order.jsx" />
       <change beforePath="$PROJECT_DIR$/js/out.js" afterPath="$PROJECT_DIR$/js/out.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Index.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
@@ -88,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderView.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderView.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/OrderView.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
@@ -178,7 +172,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -295,15 +289,15 @@
       <workItem from="1571675964496" duration="8679000" />
       <workItem from="1571761570374" duration="12430000" />
       <workItem from="1571944865171" duration="8423000" />
-      <workItem from="1572111083891" duration="6048000" />
+      <workItem from="1572111083891" duration="7671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40133000" />
+    <option name="totallyTimeSpent" value="41756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17633928" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -660,16 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
@@ -745,6 +729,16 @@
         <state relative-caret-position="140">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
