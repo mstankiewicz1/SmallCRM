@@ -5,7 +5,7 @@ import React from 'react';
 class Header extends React.Component {
 
 
-    state ={
+    state = {
               SmallCRMName: 'Black Books',
               clicked: true,
               textColor: 'white',
